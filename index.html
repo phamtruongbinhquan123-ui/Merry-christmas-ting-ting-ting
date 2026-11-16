@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas - Sân Khấu Giáng Sinh</title>
+    <style>
+        body {
+            margin: 0;
+            background: #0a0a0a;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* 40 tia LED Laser quét sân khấu */
+        #laser-box {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .laser {
+            position: absolute;
+            top: 0;
+            width: 2px;
+            height: 130vh;
+            transform-origin: top center;
+            animation: scan 3s infinite alternate ease-in-out;
+        }
+        @keyframes scan {
+            from { transform: rotate(-45deg); opacity: 0.2; }
+            to { transform: rotate(45deg); opacity: 0.8; }
+        }
+
+        /* Khung sân khấu chính */
+        .stage {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: 20px auto;
+            padding: 25px;
+            background: rgba(15, 15, 15, 0.92);
+            border: 3px solid #ffd700;
+            border-radius: 16px;
+            box-shadow: 0 0 30px #ffd700, inset 0 0 25px #b30000;
+        }
+
+        /* Tiêu đề Merry Christmas bling bling */
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #ffffff;
+            text-shadow: 0 0 10px #ffd700, 0 0 25px #ff0000;
+            margin: 10px 0 20px;
+            animation: bling 1.2s infinite alternate;
+        }
+        @keyframes bling {
+            from { text-shadow: 0 0 8px #ffd700, 0 0 15px #d40000; }
+            to { text-shadow: 0 0 20px #fff, 0 0 35px #ffd700, 0 0 50px #ff0000; }
+        }
+
+        /* Khung nhạc YouTube đầu trang */
+        .music {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Danh sách thành viên */
+        .members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        .member {
+            background: #990000;
+            border: 1px solid #ffd700;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+/* Các thẻ nội dung A, B, C, D, E */
+        .card {
+            background: #141414;
+            border-left: 5px solid #d40000;
+            border-right: 1px solid #ffd700;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #ffd700;
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+        p, li {
+            line-height: 1.6;
+            color: #f5f5f5;
+        }
+        strong { color: #ff4d4d; }
+    </style>
+</head>
+<body>
+
+    <!-- Vùng chứa 40 tia laser -->
+    <div id="laser-box"></div>
+
+    <div class="stage">
+        <h1>✨ MERRY CHRISTMAS ✨</h1>
+
+        <!-- 3. Âm nhạc ở đầu trang -->
+        <div class="music">
+            <iframe src="https://www.youtube.com/embed/7GBAtqMYL44?si=uTvER_dM9tSKK8VE" allowfullscreen></iframe>
+        </div>
+
+        <!-- 1. Thành viên -->
+        <h2>🌟 Thành Viên Nhóm</h2>
+        <div class="members">
+            <div class="member">Phạm Trương Bình Quân</div>
+            <div class="member">Phan Dương Uyển Nhi</div>
+            <div class="member">Lương Thị Ngọc Thuỷ</div>
+            <div class="member">Phạm Thị Thu Hoà</div>
+        </div>
+
+        <!-- 2. Nội dung -->
+        <div class="card">
+            <h2>A. Nguồn gốc</h2>
+            <p>Lễ Giáng Sinh (còn gọi là Noel) có nguồn gốc từ Kitô giáo, kỷ niệm ngày Chúa Giê-su ra đời tại Bethlehem. Ngày lễ chính thức được tổ chức vào ngày 25 tháng 12 hằng năm, bắt đầu từ đêm 24 tháng 12 (lễ Vọng).</p>
+        </div>
+
+        <div class="card">
+            <h2>B. Ý nghĩa</h2>
+            <p>Bên cạnh ý nghĩa tôn giáo thiêng liêng về sự ra đời của Đấng Cứu Thế, Giáng Sinh ngày nay còn là ngày lễ của gia đình và tình yêu thương. Đây là dịp để mọi người quây quần, chia sẻ niềm vui, trao nhau những lời chúc bình an và thể hiện sự quan tâm đến những người xung quanh.</p>
+        </div>
+
+        <div class="card">
+            <h2>C. Biểu tượng</h2>
+            <ul>
+                <li><strong>Cây thông Noel:</strong> Biểu tượng của sức sống mãnh liệt, niềm hy vọng và sự ấm no ngay giữa mùa đông lạnh giá.</li>
+                <li><strong>Ông già Noel:</strong> Đại diện cho lòng nhân ái, sự hào phóng và niềm vui bất ngờ dành cho trẻ nhỏ.</li>
+                <li><strong>Ngôi sao Giáng Sinh:</strong> Dẫn lối và tượng trưng cho ánh sáng, phép màu của Chúa.</li>
+                <li><strong>Hang đá và máng cỏ:</strong> Tái hiện khung cảnh giản dị nơi Chúa Giê-su chào đời.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>D. Hoạt động phổ biến</h2>
+<p>Vào dịp này, mọi người thường cùng nhau trang trí nhà cửa, dựng cây thông, tặng quà và gửi thiệp chúc mừng. Các tín hữu Kitô giáo sẽ đến nhà thờ tham dự Thánh lễ đêm và hát Thánh ca, trong khi các gia đình tổ chức bữa tiệc ấm cúng bên nhau.</p>
+        </div>
+
+        <div class="card">
+            <h2>E. Giáng Sinh tại Việt Nam</h2>
+            <p>Tại Việt Nam, dù không phải là ngày nghỉ lễ chính thức nhưng Giáng Sinh được đón nhận rất nồng nhiệt bởi cả người có đạo lẫn không theo đạo. Các con phố, trung tâm thương mại và xóm đạo được trang hoàng lộng lẫy từ sớm, thu hút đông đảo giới trẻ và các gia đình xuống đường dạo chơi, chụp ảnh và tận hưởng không khí lễ hội rộn ràng.</p>
+        </div>
+    </div>
+
+    <script>
+        // Tự động tạo 40 tia LED laser (Đỏ, Vàng, Trắng)
+        const box = document.getElementById('laser-box');
+        const colors = ['#ff0000', '#ffd700', '#ffffff'];
+
+        for (let i = 0; i < 40; i++) {
+            const beam = document.createElement('div');
+            beam.className = 'laser';
+            const color = colors[i % 3];
+            beam.style.left = (i * 2.5) + '%';
+            beam.style.background = `linear-gradient(to bottom, ${color}, transparent)`;
+            beam.style.boxShadow = `0 0 8px ${color}`;
+            beam.style.animationDelay = (i * -0.15) + 's';
+            box.appendChild(beam);
+        }
+    </script>
+
+</body>
+</html>
